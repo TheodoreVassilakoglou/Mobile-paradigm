@@ -1,2 +1,2 @@
-# Mobile-paradime
+# Mobile-paradigm
 My work  for this class
