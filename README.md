@@ -1,5 +1,7 @@
 # Mobile-paradigm
 My work  for this class
+
+
 App currently only works on Mozilla Firefox and Mircosoft Edge browsers
 
 Ml5.Libraries and models
