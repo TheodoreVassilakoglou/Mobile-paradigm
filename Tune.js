@@ -90,7 +90,6 @@ let notes = [
   {note:'A#5', freq:932.22},
   {note:'B5', freq:987.77},
 
-
   {note:'C6', freq:1046.50},
   {note:'C#6', freq:1108.73},
   {note:'D6', freq:1174.66},
@@ -117,7 +116,6 @@ let notes = [
   {note:'A#7', freq:3729.00},
   {note:'B7', freq:3951.07},
 
-
   {note:'C8', freq:4186.01},
   {note:'C#8', freq:4434.92},
   {note:'D8', freq:4798.63},
@@ -134,10 +132,13 @@ let notes = [
 
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(windowWidth, windowHeight-58);
   audioContext = getAudioContext();
   mic = new p5.AudioIn();
   mic.start(listening);
+}
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight-58);
 }
 
 function listening() {
@@ -167,7 +168,7 @@ function modelLoaded() {
 }
 
 function draw() {
-  background(0);
+  background(143, 143, 143);
   textAlign(CENTER, CENTER);
   fill(255);
   textSize(32);
@@ -182,6 +183,8 @@ for (let i = 0; i < notes.length; i++) {
     recordDiff = diff;
   }
 }
+
+
 
 
 
@@ -202,11 +205,12 @@ strokeWeight(1);
 if (abs(diff) < 0.5 ) {
   fill(0,255,0);
 }
-rect(200, 100, 200, 50);
+
+rect(windowWidth/2, 100, 200, 50);
 
 stroke(255);
 strokeWeight(4);
-line(200,0,200, 200);
+line(windowWidth/2,0,windowWidth/2,400);
 
 noStroke();
 fill(255, 0, 0);
@@ -215,6 +219,6 @@ if (abs(diff) < 0.5 ) {
 
 }
 
-rect(200 + diff / 0.1, 100, 10, 75);
+rect(windowWidth/2 + diff / 0.1, 100, 10, 75);
 
 }
