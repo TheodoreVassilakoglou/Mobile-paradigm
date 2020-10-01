@@ -1,20 +1,31 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
-      <title>Tuner</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="shortcut icon" href="/assets/favicon.ico">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
       <link rel="stylesheet" href="css/stylesheet.css">
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/p5.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.dom.min.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.9.0/addons/p5.sound.min.js"></script>
-      <link rel="stylesheet" href="Tune.js">
-      <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
    </head>
-
    <body>
+      <main>
+         <section class="chords">
+         <div class="chord">
+            <div class="chord_image">
+               <img
+                  src="https://www.chordbank.com/media/c-chord.jpg"
+                  alt="how to play the c chord"/>
+            </div>
+            <div class="chord_content">
+               <br>
+               <br>
+               <div class="chord_info">
+                  <h1 class="text--medium">C chord shape</h1>
+                  <p class="chord_play text--medium">Play Chord</p>
+               </div>
+            </div>
+         </div>
+      </main>
       <nav class="nav">
          <a href="custom.html" class="nav__link">
          <i class="material-icons nav__icon">build</i>
@@ -29,6 +40,5 @@
          <span class="nav__text">Chord Chart</span>
          </a>
       </nav>
-      <script src="Tune.js" charset="utf-8"></script>
    </body>
 </html>

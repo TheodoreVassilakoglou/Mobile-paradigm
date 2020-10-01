@@ -168,7 +168,7 @@ function modelLoaded() {
 }
 
 function draw() {
-  background(143, 143, 143);
+  background(48,48,50);
   textAlign(CENTER, CENTER);
   fill(255);
   textSize(32);
