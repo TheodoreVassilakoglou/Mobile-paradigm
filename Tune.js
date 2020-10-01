@@ -137,6 +137,11 @@ function setup() {
   mic = new p5.AudioIn();
   mic.start(listening);
 }
+
+function mousePressed() { getAudioContext().resume(); }
+
+
+
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight-58);
 }
