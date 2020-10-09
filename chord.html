@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
+     <title>Chord Charts</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="shortcut icon" href="/assets/favicon.ico">
@@ -8,24 +9,84 @@
       <link rel="stylesheet" href="css/stylesheet.css">
    </head>
    <body>
+      <h1>Chord Chart</h1>
+      <br>
       <main>
          <section class="chords">
-         <div class="chord">
-            <div class="chord_image">
-               <img
-                  src="https://www.chordbank.com/media/c-chord.jpg"
-                  alt="how to play the c chord"/>
-            </div>
-            <div class="chord_content">
-               <br>
-               <br>
-               <div class="chord_info">
-                  <h1 class="text--medium">C chord shape</h1>
-                  <p class="chord_play text--medium">Play Chord</p>
+            <div class="chord">
+               <div class="chord_image">
+                  <img
+                     src="https://www.chordbank.com/media/c-chord.jpg"
+                     alt="how to play the c chord"/>
+               </div>
+               <div class="chord_content">
+                  <br>
+                  <br>
+                  <div class="chord_info">
+                     <p class="text--medium">C chord shape</p>
+                     <button id=audioControl class="chord_play text--medium">Play Chord</button>
+                  </div>
                </div>
             </div>
-         </div>
+            <div class="chord">
+               <div class="chord_image">
+                  <img
+                     src="images/achord.png"
+                     alt="how to play the A chord"/>
+               </div>
+               <div class="chord_content">
+                  <br>
+                  <br>
+                  <div class="chord_info">
+                     <p class="text--medium">A chord shape</p>
+                     <button id=audioControl1 class="chord_play text--medium">Play Chord</button>
+                  </div>
+               </div>
+            </div>
+            <div class="chord">
+               <div class="chord_image">
+                  <img
+                     src="images/fchord.png"
+                     alt="how to play the F chord"/>
+               </div>
+               <div class="chord_content">
+                  <br>
+                  <br>
+                  <div class="chord_info">
+                     <p class="text--medium">F chord shape</p>
+                     <button id=audioControl2 class="chord_play text--medium">Play Chord</button>
+                  </div>
+               </div>
+            </div>
+            <div class="chord">
+               <div class="chord_image">
+                  <img
+                     src="images/dchord.png"
+                     alt="how to play the D chord"/>
+               </div>
+               <div class="chord_content">
+                  <br>
+                  <br>
+                  <div class="chord_info">
+                     <p class="text--medium">D chord shape</p>
+                     <button id=audioControl3 class="chord_play text--medium">Play Chord</button>
+                  </div>
+               </div>
+            </div>
+         </section>
       </main>
+      <audio id="chord" preload='none'>
+         <source src='audio/zcchord.mp3' type='audio/wav' />
+      </audio>
+      <audio id="chord1" preload='none'>
+         <source src='audio/zachord.mp3' type='audio/wav' />
+      </audio>
+      <audio id="chord2" preload='none'>
+         <source src='audio/zfchord.mp3' type='audio/wav' />
+      </audio>
+      <audio id="chord3" preload='none'>
+         <source src='audio/zdchord.mp3' type='audio/wav' />
+      </audio>
       <nav class="nav">
          <a href="custom.html" class="nav__link">
          <i class="material-icons nav__icon">build</i>
@@ -36,9 +97,10 @@
          <span class="nav__text">Tuner</span>
          </a>
          <a href="chord.html" class="nav__link">
-         <i class="material-icons nav__icon">settings</i>
+         <i class="material-icons nav__icon">music_video</i>
          <span class="nav__text">Chord Chart</span>
          </a>
       </nav>
    </body>
+   <script src="play.js">  </script>
 </html>

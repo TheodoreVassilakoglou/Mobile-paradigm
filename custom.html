@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
    <head>
-      <title>Tuner</title>
+     <title>Custom Tunings</title>
       <meta charset="utf-8">
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="shortcut icon" href="/assets/favicon.ico">
@@ -9,122 +9,94 @@
       <link rel="stylesheet" href="css/stylesheet.css">
    </head>
    <body>
-      <div class="image">
-         <div class="noteselect1">
-            <div class="container">
-               <div class="item">
-                  <form>
-                     <div class="formBox">
-                        <select class="mynoteslist" id=note1 form='tuningform'>
-                           <option value="A1">A1</option>
-                           <option value="B1">B1</option>
-                           <option value="C1">C1</option>
-                           <option value="D1">D1</option>
-                           <option value="E1">E1</option>
-                           <option value="F1">F1</option>
-                           <option value="G1">G1</option>
-                        </select>
-                     </div>
-               </div>
-               <div class="item">
-               <div class="formBox">
-               <select class="mynoteslist" id=note2>
-               <option value="A1">A1</option>
-               <option value="B1">B1</option>
-               <option value="C1">C1</option>
-               <option value="D1">D1</option>
-               <option value="E1">E1</option>
-               <option value="F1">F1</option>
-               <option value="G1">G1</option>
-               </select>
-               </div>
-               </div>
-               <div class="item">
-               <div class="formBox">
-               <select class="mynoteslist" id=note3>
-               <option value="A1">A1</option>
-               <option value="B1">B1</option>
-               <option value="C1">C1</option>
-               <option value="D1">D1</option>
-               <option value="E1">E1</option>
-               <option value="F1">F1</option>
-               <option value="G1">G1</option>
-               </select>
-               </div>
-               </div>
+      <div class="custom_tunings">
+         <h1>Custom Tunings</h1>
+         <br>
+         <fieldset>
+            <legend>Add New Tunings</legend>
+            <div class="formBox">
+               <label for="">Tuning Name</label>
+               <input type="text" id="inpkey" placeholder="Insert Name"> <br>
             </div>
-         </div>
-         <div class="noteselect2">
-         <div class="container">
-         <div class="item">
-         <div class="formBox">
-         <select class="mynoteslist" id=note4 form='tuningform'>
-         <option value="A1">A1</option>
-         <option value="B1">B1</option>
-         <option value="C1">C1</option>
-         <option value="D1">D1</option>
-         <option value="E1">E1</option>
-         <option value="F1">F1</option>
-         <option value="G1">G1</option>
-         </select>
-         </div>
-         </div>
-         <div class="item">
-         <div class="formBox">
-         <select class="mynoteslist" id=note5>
-         <option value="A1">A1</option>
-         <option value="B1">B1</option>
-         <option value="C1">C1</option>
-         <option value="D1">D1</option>
-         <option value="E1">E1</option>
-         <option value="F1">F1</option>
-         <option value="G1">G1</option>
-         </select>
-         </div>
-         </div>
-         <div class="item">
-         <div class="formBox">
-         <select class="mynoteslist" id=note6>
-         <option value="A1">A1</option>
-         <option value="B1">B1</option>
-         <option value="C1">C1</option>
-         <option value="D1">D1</option>
-         <option value="E1">E1</option>
-         <option value="F1">F1</option>
-         <option value="G1">G1</option>
-         </select>
-         </div>
-         </div>
-         </div>
-         </div>
-         <div class="formBox">
-         <label for="title">My Custom Tuning</label>
-         <input type="text" id="name" placeholder="Name of your tuning"/>
-         </div>
-         <div class="formBox">
-         <button id="btn">Click to Add</button>
-         </div>
-         <div id="msg">
-         <pre></pre>
-         </div>
-         </form>
-         <div class="headstockimage">  <img src="images/headstock.png" alt="headstock of a guitar" class="headstock"></div>
+            <div class="formBox">
+               <select class="mynoteslist" id="inpvalue">
+                  <option value="A1">A1</option>
+                  <option value="B1">B1</option>
+                  <option value="C1">C1</option>
+                  <option value="D1">D1</option>
+                  <option value="E1">E1</option>
+                  <option value="F1">F1</option>
+                  <option value="G1">G1</option>
+               </select>
+               <select class="mynoteslist" id="inpvalue2">
+                  <option value="A1">A1</option>
+                  <option value="B1">B1</option>
+                  <option value="C1">C1</option>
+                  <option value="D1">D1</option>
+                  <option value="E1">E1</option>
+                  <option value="F1">F1</option>
+                  <option value="G1">G1</option>
+               </select>
+               <select class="mynoteslist" id="inpvalue3">
+                  <option value="A1">A1</option>
+                  <option value="B1">B1</option>
+                  <option value="C1">C1</option>
+                  <option value="D1">D1</option>
+                  <option value="E1">E1</option>
+                  <option value="F1">F1</option>
+                  <option value="G1">G1</option>
+               </select>
+               <select class="mynoteslist" id="inpvalue4">
+                  <option value="A1">A1</option>
+                  <option value="B1">B1</option>
+                  <option value="C1">C1</option>
+                  <option value="D1">D1</option>
+                  <option value="E1">E1</option>
+                  <option value="F1">F1</option>
+                  <option value="G1">G1</option>
+               </select>
+               <select class="mynoteslist" id="inpvalue5">
+                  <option value="A1">A1</option>
+                  <option value="B1">B1</option>
+                  <option value="C1">C1</option>
+                  <option value="D1">D1</option>
+                  <option value="E1">E1</option>
+                  <option value="F1">F1</option>
+                  <option value="G1">G1</option>
+               </select>
+               <select class="mynoteslist" id="inpvalue6">
+                  <option value="A1">A1</option>
+                  <option value="B1">B1</option>
+                  <option value="C1">C1</option>
+                  <option value="D1">D1</option>
+                  <option value="E1">E1</option>
+                  <option value="F1">F1</option>
+                  <option value="G1">G1</option>
+               </select>
+            </div>
+            <button type="button" id="btninsert">Save Tuning </button>
+            <br>
+         </fieldset>
+         <fieldset>
+            <legend>My Tunings</legend>
+            <div id="isoutput"> </div>
+         </fieldset>
       </div>
       <nav class="nav">
          <a href="custom.html" class="nav__link">
          <i class="material-icons nav__icon">build</i>
          <span class="nav__text">Custom Tuning</span>
          </a>
-         <a href="tune.html" class="nav__link nav__link--active">
+         <a href="Tune.html" class="nav__link nav__link--active">
          <i class="material-icons nav__icon">speed</i>
          <span class="nav__text">Tuner</span>
          </a>
          <a href="chord.html" class="nav__link">
-         <i class="material-icons nav__icon">settings</i>
+         <i class="material-icons nav__icon">music_video</i>
          <span class="nav__text">Chord Chart</span>
          </a>
       </nav>
-      <script src="Notes.js" charset="utf-8"></script>
-      <script src="custom.js" charset="utf-8"></script>
    </body>
+   <script src="custom.js"></script>
+   <script src="notes.js"></script>
 </html>

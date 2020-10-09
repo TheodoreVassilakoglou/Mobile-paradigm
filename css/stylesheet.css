@@ -55,15 +55,11 @@ max-height: auto;
 }
 
 
+
+
 /*Cusom tuning page*/
 
-.headstock{
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  width: 50%;
-  height: 50%
-}
+
 
 /*
 * {box-sizing: border-box;}
@@ -80,51 +76,37 @@ max-height: auto;
   right: 200px;
 }
 */
+.custom_tunings fieldset {
+  border: 2px solid gray;
+  border-radius: 5px;
+  width: 30%;
+  margin: auto;
+  padding: 20px;
+  min-width: 85%;
+  color: white;
 
-.item {
-  width: 100px;
-  height: 100px;
-  padding: 10px;
-  background-color: rgba(111,41,97,.3);
-  border: 2px solid rgba(111,41,97,.5);
+}
+.custom_tunings button {
+  width:30%;
+  min-width: 40%;
+  border-radius: 5px;
+  border: 3px solid gray;
+}
+
+.custom_tunings input{
+  width: 100%;
+  padding: 5px;
+  border: 2px solid gray;
+  border-radius: 5px;
 }
 
 
-.grid-container {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 1fr;
-  gap: 1px 1px;
-  grid-template-areas:
-    ". . . ."
-    ". image image ."
-    ". . . .";
+ h1{
+  text-align: center;
+  padding: 20px;
+  background-color: #0060ff;
+  color: white;
 }
-.image {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 1fr;
-  gap: 1px 1px;
-  grid-template-areas:
-    "noteselect1 headstockimage noteselect2";
-  grid-area: image;
-}
-.noteselect1 { grid-area: noteselect1; }
-.noteselect2 { grid-area: noteselect2; }
-.headstockimage { grid-area: headstockimage; }
-
-.noteselect1{
-  position: absolute;
-  right: 1150px;
-  top:80px
-}
-.noteselect2{
-  position: absolute;
-  left: 1150px;
-  top:80px
-}
-
-
 
 
 
@@ -156,7 +138,6 @@ main {
   display: flex;
   flex-direction: column;
   background-color: #39393b;
-  cursor: pointer;
 }
 
 

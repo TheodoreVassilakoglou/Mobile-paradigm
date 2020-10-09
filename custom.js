@@ -1,41 +1,55 @@
-let tunings = [];
-   const addTuning = (ev)=>{
-       ev.preventDefault();
-       let tuning = {
-           name: document.getElementById('name').value,
-           note1:document.getElementById('note1').value,
-           note2:document.getElementById('note2').value,
-           note3:document.getElementById('note3').value,
-           note4:document.getElementById('note4').value,
-           note5:document.getElementById('note5').value,
-           note6:document.getElementById('note6').value
-       }
-       tunings.push(tuning);
-       document.forms[0].reset();
+var inpkey = document.getElementById("inpkey");
+var inpvalue=document.getElementById("inpvalue");
+var inpvalue2=document.getElementById("inpvalue2");
+var inpvalue3=document.getElementById("inpvalue3");
+var inpvalue4=document.getElementById("inpvalue4");
+var inpvalue5=document.getElementById("inpvalue5");
+var inpvalue6=document.getElementById("inpvalue6");
 
 
-       //displays tunings upon creation however they dissapear when refreshing the page
-       console.warn('added' , {tunings} );
-       let pre = document.querySelector('#msg pre');
-       pre.textContent = '\n' + JSON.stringify(tunings, '\t', 2);
+
+var btninsert = document.getElementById("btninsert");
+var isoutput = document.getElementById("isoutput");
 
 
-       localStorage.setItem('MyTuningList', JSON.stringify(tunings) );
-   }
-   document.addEventListener('DOMContentLoaded', ()=>{
-       document.getElementById('btn').addEventListener('click', addTuning);
-   });
+var key = inpkey.value;
+var value = inpvalue.value;
+var value2 = inpvalue2.value;
+var value3 = inpvalue3.value;
+var value3 = inpvalue4.value;
+var value3 = inpvalue5.value;
+var value3 = inpvalue6.value;
 
-   document.getElementById('MyTuningList').innerHTML = JSON.stringify(localTuning, null, 2);
+console.log(key);
+console.log(value);
+console.log(value2);
 
-/*
-const data = localStorage.getItem("tunings");
+btninsert.onclick = function(){
+  var key = inpkey.value;
+  var value = inpvalue.value;
+  var value2 = inpvalue2.value;
+  var value3 = inpvalue3.value;
+  var value4 = inpvalue4.value;
+  var value5 = inpvalue5.value;
+  var value6 = inpvalue6.value;
 
- if (!tunings || !tunings.length) {
-   tunings = [];
- } else {
-   tunings = JSON.parse(data);
- }
 
- console.log(tunings);
-*/
+
+if(key && value) {
+  var content = value + ', ' + value2 + ', ' + value3 + ', '  + value4 + ', ' + value5 + ', '  + value6;
+    // if the key exists
+    if(localStorage.getItem(key)){
+        // add this value onto the end of the existing string
+        localStorage.setItem(key, content);
+    }else{
+        // the key doesn't exist yet, add it and the new value
+        localStorage.setItem(key, content);
+    }
+    location.reload();
+}
+};
+for(var i=0; i<localStorage.length; i++){
+  var key=localStorage.key(i);
+  var value=localStorage.getItem(key);
+  isoutput.innerHTML += `${key}: ${value}  <br>` ;
+}

@@ -132,18 +132,27 @@ let notes = [
 
 
 function setup() {
-  createCanvas(windowWidth, windowHeight-58);
+
+  createCanvas(windowWidth, windowHeight-170);
   audioContext = getAudioContext();
+  if (getAudioContext().state !== 'running') {
+}
   mic = new p5.AudioIn();
   mic.start(listening);
 }
 
-function mousePressed() { getAudioContext().resume(); }
+
+
+function mouseClicked(){
+   if (getAudioContext().state !== 'running') {
+    getAudioContext().resume();
+  }
+}
 
 
 
 function windowResized() {
-  resizeCanvas(windowWidth, windowHeight-58);
+  resizeCanvas(windowWidth, windowHeight-170);
 }
 
 function listening() {
@@ -172,6 +181,7 @@ function modelLoaded() {
   pitch.getPitch(gotPitch);
 }
 
+
 function draw() {
   background(48,48,50);
   textAlign(CENTER, CENTER);
@@ -197,6 +207,9 @@ for (let i = 0; i < notes.length; i++) {
 textSize(65);
 text(closestNote.note, width/2, height - 50);
 
+textSize(32);
+text("Tap to play", width/4, 20);
+
 
 
 let diff = recordDiff;
@@ -215,7 +228,7 @@ rect(windowWidth/2, 100, 200, 50);
 
 stroke(255);
 strokeWeight(4);
-line(windowWidth/2,0,windowWidth/2,400);
+line(windowWidth/2,0,windowWidth/2,300);
 
 noStroke();
 fill(255, 0, 0);
