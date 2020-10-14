@@ -6,6 +6,7 @@
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <link rel="shortcut icon" href="/assets/favicon.ico">
       <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+      <link rel="stylesheet" href="css/bootstrap.min.css">
       <link rel="stylesheet" href="css/stylesheet.css">
    </head>
    <body>
@@ -24,7 +25,7 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">C chord shape</p>
-                     <button id=audioControl class="chord_play text--medium">Play Chord</button>
+                     <button id="audioControl1" class="chord_play text--medium" onclick="PlayTune(1)">Play Chord</button>
                   </div>
                </div>
             </div>
@@ -39,7 +40,7 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">A chord shape</p>
-                     <button id=audioControl1 class="chord_play text--medium">Play Chord</button>
+                     <button id=audioControl2 class="chord_play text--medium" onclick="PlayTune(2)">Play Chord</button>
                   </div>
                </div>
             </div>
@@ -54,7 +55,7 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">F chord shape</p>
-                     <button id=audioControl2 class="chord_play text--medium">Play Chord</button>
+                     <button id=audioControl3 class="chord_play text--medium" onclick="PlayTune(3)">Play Chord</button>
                   </div>
                </div>
             </div>
@@ -69,22 +70,22 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">D chord shape</p>
-                     <button id=audioControl3 class="chord_play text--medium">Play Chord</button>
+                     <button id=audioControl4 class="chord_play text--medium" onclick="PlayTune(4)">Play Chord</button>
                   </div>
                </div>
             </div>
          </section>
       </main>
-      <audio id="chord" preload='none'>
+      <audio id="chord1" preload='none'>
          <source src='audio/zcchord.mp3' type='audio/wav' />
       </audio>
-      <audio id="chord1" preload='none'>
+      <audio id="chord2" preload='none'>
          <source src='audio/zachord.mp3' type='audio/wav' />
       </audio>
-      <audio id="chord2" preload='none'>
+      <audio id="chord3" preload='none'>
          <source src='audio/zfchord.mp3' type='audio/wav' />
       </audio>
-      <audio id="chord3" preload='none'>
+      <audio id="chord4" preload='none'>
          <source src='audio/zdchord.mp3' type='audio/wav' />
       </audio>
       <nav class="nav">
@@ -92,11 +93,11 @@
          <i class="material-icons nav__icon">build</i>
          <span class="nav__text">Custom Tuning</span>
          </a>
-         <a href="Tune.html" class="nav__link nav__link--active">
+         <a href="Tune.html" class="nav__link">
          <i class="material-icons nav__icon">speed</i>
          <span class="nav__text">Tuner</span>
          </a>
-         <a href="chord.html" class="nav__link">
+         <a href="chord.html" class="nav__link nav__link--active">
          <i class="material-icons nav__icon">music_video</i>
          <span class="nav__text">Chord Chart</span>
          </a>

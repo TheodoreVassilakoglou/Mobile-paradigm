@@ -15,14 +15,14 @@ max-height: auto;
 }
 
 .nav {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    height: 55px;
-    box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
-    background-color: #ffffff;
-    display: flex;
-    overflow-x: auto;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 55px;
+  box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+  background-color: #ffffff;
+  display: flex;
+  overflow-x: auto;
 }
 
 .nav__link {
@@ -101,11 +101,13 @@ max-height: auto;
 }
 
 
- h1{
+h1{
   text-align: center;
   padding: 20px;
-  background-color: #0060ff;
+  background-color: #083e98;
   color: white;
+  font-family: music;
+  font-weight: normal;
 }
 
 
@@ -206,4 +208,21 @@ main {
   .chord {
     grid-column-end: span 6;
   }
+}
+
+#isoutput{
+  overflow: auto;
+}
+
+@font-face { 
+  font-family: music; 
+  src: url('../Guitar.ttf'); 
+}
+
+.btn-sml{
+  margin: 10px 0;
+}
+
+.formBox{
+  margin: 10px 2px;
 }
