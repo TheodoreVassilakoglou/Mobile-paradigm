@@ -214,9 +214,9 @@ main {
   overflow: auto;
 }
 
-@font-face { 
-  font-family: music; 
-  src: url('../Guitar.ttf'); 
+@font-face {
+  font-family: music;
+  src: url('../Guitar.TTF'); 
 }
 
 .btn-sml{
