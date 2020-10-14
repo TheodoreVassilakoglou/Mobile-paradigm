@@ -25,7 +25,7 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">C chord shape</p>
-                     <button id=audioControl class="chord_play text--medium">Play Chord</button>
+                     <button id="audioControl1" class="chord_play text--medium" onclick="PlayTune(1)">Play Chord</button>
                   </div>
                </div>
             </div>
@@ -40,7 +40,7 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">A chord shape</p>
-                     <button id=audioControl1 class="chord_play text--medium">Play Chord</button>
+                     <button id=audioControl2 class="chord_play text--medium" onclick="PlayTune(2)">Play Chord</button>
                   </div>
                </div>
             </div>
@@ -55,7 +55,7 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">F chord shape</p>
-                     <button id=audioControl2 class="chord_play text--medium">Play Chord</button>
+                     <button id=audioControl3 class="chord_play text--medium" onclick="PlayTune(3)">Play Chord</button>
                   </div>
                </div>
             </div>
@@ -70,22 +70,22 @@
                   <br>
                   <div class="chord_info">
                      <p class="text--medium">D chord shape</p>
-                     <button id=audioControl3 class="chord_play text--medium">Play Chord</button>
+                     <button id=audioControl4 class="chord_play text--medium" onclick="PlayTune(4)">Play Chord</button>
                   </div>
                </div>
             </div>
          </section>
       </main>
-      <audio id="chord" preload='none'>
+      <audio id="chord1" preload='none'>
          <source src='audio/zcchord.mp3' type='audio/wav' />
       </audio>
-      <audio id="chord1" preload='none'>
+      <audio id="chord2" preload='none'>
          <source src='audio/zachord.mp3' type='audio/wav' />
       </audio>
-      <audio id="chord2" preload='none'>
+      <audio id="chord3" preload='none'>
          <source src='audio/zfchord.mp3' type='audio/wav' />
       </audio>
-      <audio id="chord3" preload='none'>
+      <audio id="chord4" preload='none'>
          <source src='audio/zdchord.mp3' type='audio/wav' />
       </audio>
       <nav class="nav">
