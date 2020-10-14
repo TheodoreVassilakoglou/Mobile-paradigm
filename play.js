@@ -15,8 +15,6 @@ ctrl.onclick = function () {
     return false;
 };
 
-
-
 var chord1 = document.getElementById('chord1'),
     ctrl1 = document.getElementById('audioControl1');
 

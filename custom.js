@@ -33,23 +33,26 @@ btninsert.onclick = function(){
   var value5 = inpvalue5.value;
   var value6 = inpvalue6.value;
 
-
-
 if(key && value) {
+  var savekey = "Tune:"+inpkey.value;
   var content = value + ', ' + value2 + ', ' + value3 + ', '  + value4 + ', ' + value5 + ', '  + value6;
     // if the key exists
-    if(localStorage.getItem(key)){
+    if(localStorage.getItem(savekey)){
         // add this value onto the end of the existing string
-        localStorage.setItem(key, content);
+        localStorage.setItem(savekey, content);
     }else{
         // the key doesn't exist yet, add it and the new value
-        localStorage.setItem(key, content);
+        localStorage.setItem(savekey, content);
     }
     location.reload();
 }
 };
+
 for(var i=0; i<localStorage.length; i++){
   var key=localStorage.key(i);
-  var value=localStorage.getItem(key);
-  isoutput.innerHTML += `${key}: ${value}  <br>` ;
+  if (key.includes("Tune:")){
+    var value=localStorage.getItem(key);
+    var strippedkey = key.replace(/Tune:/g,'');
+    isoutput.innerHTML += `${strippedkey}: ${value}  <br>` ;
+  }
 }
