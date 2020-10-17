@@ -1,3 +1,4 @@
+
 var inpkey = document.getElementById("inpkey");
 var inpvalue=document.getElementById("inpvalue");
 var inpvalue2=document.getElementById("inpvalue2");
